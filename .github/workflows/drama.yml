@@ -1,0 +1,35 @@
+name: AI Mini Drama Factory
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 10 * * *"
+
+jobs:
+  create-drama:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare environment
+        run: |
+          mkdir -p output
+          echo "AI MINI DRAMA FACTORY STARTED"
+          echo "Date: $(date)"
+
+      - name: Generate drama
+        run: |
+          echo "Story engine coming next..."
+          echo "Scene engine coming next..."
+          echo "Voice engine coming next..."
+          echo "Video engine coming next..."
+
+      - name: Build video
+        run: |
+          echo "Video rendering engine coming next..."
+
+      - name: Publish
+        run: |
+          echo "TikTok publishing engine coming next..."
